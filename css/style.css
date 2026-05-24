@@ -1,0 +1,73 @@
+/* Base CSS from README */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+.emoji {
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.emoji h2 {
+  margin: 0;
+  border-bottom: 2px solid #ccc;
+}
+.emoji a {
+  text-decoration: none;
+  background-color: #781BAA;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.icon {
+  font-size: 4rem;
+}
+
+/* two equal columns using repeat */
+.emojis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 16px;
+}
+
+/* stack card content vertically with space pushing button down */
+.emoji {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 280px;
+}
+
+/* place icon at the top */
+.icon {
+  order: 1;
+  text-align: center;
+  align-self: center;
+  padding-bottom: 8px;
+}
+
+/* heading below icon */
+.emoji h2 {
+  order: 2;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+/* description text */
+.emoji p {
+  order: 3;
+  flex: 1;
+  margin: 0 0 12px 0;
+}
+
+/* button pushed to bottom */
+.emoji a {
+  order: 4;
+  display: block;
+  margin-top: auto;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
